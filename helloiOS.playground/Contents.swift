@@ -15,11 +15,7 @@ print(myStr + " Iron Man")
 var myCord = (x: 100, y: 20)
 print(myCord.x)
 print(myCord.y)
-//Type Alias AKA JS Prototypes
-typealias Point = (x: Int, y: Int)
-let origin: Point = (5, 10)
-print(origin.x)
-print(origin.y)
+
 // type convertion
 let num = 3000
 let endGame = myStr + String(num)
@@ -49,23 +45,9 @@ while (curCount < 10){
 for i in 0 ... 10{
     print(i)
 }
-//enumerations
 
-enum gameState {
-    case Start
-    case inPlay
-    case gameOver
-}
-var MygameState = gameState.Start
-switch MygameState {
-case .Start:
-    print("starting")
-    MygameState = .inPlay
-case .inPlay:
-    MygameState = .gameOver
-case .gameOver:
-    MygameState = .Start
-}
+
+
 //functions
 // functionName(Parameter) -> return type
 func addTwo(a: Int, b:Int) -> Int{
@@ -90,3 +72,25 @@ print(myAry)
 myAry.remove(at: 0)
 myAry.popLast()
 print(myAry)
+
+//enumerations like 120b
+enum gameState {
+    case Start
+    case inPlay
+    case gameOver
+}
+var MygameState = gameState.Start
+switch MygameState {
+case .Start:
+    print("starting")
+    MygameState = .inPlay
+case .inPlay:
+    MygameState = .gameOver
+case .gameOver:
+    MygameState = .Start
+}
+//Type Alias AKA JS Prototypes
+typealias Point = (x: Int, y: Int)
+let origin: Point = (5, 10)
+print(origin.x)
+print(origin.y)
