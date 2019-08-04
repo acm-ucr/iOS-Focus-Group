@@ -1,0 +1,37 @@
+PODS:
+  - Firebase/CoreOnly (5.13.0):
+    - FirebaseCore (= 5.1.8)
+  - Firebase/Database (5.13.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.3)
+  - FirebaseCore (5.1.8):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.0.3):
+    - FirebaseCore (~> 5.0)
+    - leveldb-library (~> 1.18)
+  - GoogleUtilities/Environment (5.3.6)
+  - GoogleUtilities/Logger (5.3.6):
+    - GoogleUtilities/Environment
+  - leveldb-library (1.20)
+
+DEPENDENCIES:
+  - Firebase/Database
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseCore
+    - FirebaseDatabase
+    - GoogleUtilities
+    - leveldb-library
+
+SPEC CHECKSUMS:
+  Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
+  FirebaseCore: fba2bfaa691c49028309b92e4dd37cc4b5512fbe
+  FirebaseDatabase: e2bcbc106adc4b11a2da3ec2eb63c0c4a44f2f54
+  GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+
+PODFILE CHECKSUM: 832d84ab6e12753247363d94ab10b52ac3d7cfb7
+
+COCOAPODS: 1.6.0
