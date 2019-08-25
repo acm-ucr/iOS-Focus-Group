@@ -7,4 +7,5 @@ target 'UIIntro' do
 
   # Pods for UIIntro
 pod 'Alamofire-SwiftyJSON'
+pod 'Kingfisher'
 end

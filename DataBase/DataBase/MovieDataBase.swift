@@ -34,7 +34,7 @@ func build() {
     }
     let ref = Database.database().reference()
     ref.setValue(["Movie": FirebaseAry])
-    pullData()
+   // pullData()
     
 }
 func printDone(){
@@ -42,17 +42,10 @@ func printDone(){
 }
 func pullData (){
     let Pull = DispatchGroup()
-    Pull.enter()
+    //Pull.enter()
     let ref = Database.database().reference()
     let Movieref = ref.child("Movie")
-    Movieref.observeSingleEvent(of: .value, with: {
-        snapshot in
-        for child in (snapshot.children.allObjects as! [DataSnapshot]){
-            print(child.value as Any)
-        }
-        Pull.leave()
+    Movieref.observe(.value, with: {(snapshop) in
+        print(snapshop)
     })
-    Pull.notify(queue: .main){
-        printDone()
-    }
 }

@@ -1,4 +1,8 @@
 PODS:
+  - Alamofire (4.8.0)
+  - Alamofire-SwiftyJSON (3.0.0):
+    - Alamofire (~> 4.5)
+    - SwiftyJSON (~> 4.0.0)
   - Firebase/CoreOnly (5.13.0):
     - FirebaseCore (= 5.1.8)
   - Firebase/Database (5.13.0):
@@ -13,25 +17,33 @@ PODS:
   - GoogleUtilities/Logger (5.3.6):
     - GoogleUtilities/Environment
   - leveldb-library (1.20)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire-SwiftyJSON
   - Firebase/Database
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Alamofire-SwiftyJSON
     - Firebase
     - FirebaseCore
     - FirebaseDatabase
     - GoogleUtilities
     - leveldb-library
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
   FirebaseCore: fba2bfaa691c49028309b92e4dd37cc4b5512fbe
   FirebaseDatabase: e2bcbc106adc4b11a2da3ec2eb63c0c4a44f2f54
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 832d84ab6e12753247363d94ab10b52ac3d7cfb7
+PODFILE CHECKSUM: 9343cbfb717eefef4faf9d92571213b72588128d
 
 COCOAPODS: 1.6.0
