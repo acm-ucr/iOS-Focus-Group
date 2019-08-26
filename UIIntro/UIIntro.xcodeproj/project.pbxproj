@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7992868623087498004E96A4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992868523087498004E96A4 /* TableViewController.swift */; };
+		79B27C8E231467870066A9C7 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B27C8D231467870066A9C7 /* Topic.swift */; };
+		79B27C90231468690066A9C7 /* RedditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B27C8F231468690066A9C7 /* RedditTableViewController.swift */; };
 		79FCE18722DEF6C800624AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCE18622DEF6C800624AC3 /* AppDelegate.swift */; };
 		79FCE18922DEF6C800624AC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCE18822DEF6C800624AC3 /* ViewController.swift */; };
 		79FCE18C22DEF6C800624AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FCE18A22DEF6C800624AC3 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		3ECA4D2BB0390DE7722E7B43 /* Pods-UIIntro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIIntro.debug.xcconfig"; path = "Target Support Files/Pods-UIIntro/Pods-UIIntro.debug.xcconfig"; sourceTree = "<group>"; };
 		7365BE181D70AA1DFC5D6081 /* Pods_UIIntro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIIntro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7992868523087498004E96A4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		79B27C8D231467870066A9C7 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		79B27C8F231468690066A9C7 /* RedditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTableViewController.swift; sourceTree = "<group>"; };
 		79FCE18322DEF6C800624AC3 /* UIIntro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIIntro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FCE18622DEF6C800624AC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79FCE18822DEF6C800624AC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +80,12 @@
 		79FCE18522DEF6C800624AC3 /* UIIntro */ = {
 			isa = PBXGroup;
 			children = (
+				79B27C8D231467870066A9C7 /* Topic.swift */,
 				79FCE18622DEF6C800624AC3 /* AppDelegate.swift */,
 				79FCE18822DEF6C800624AC3 /* ViewController.swift */,
 				7992868523087498004E96A4 /* TableViewController.swift */,
 				79FCE18A22DEF6C800624AC3 /* Main.storyboard */,
+				79B27C8F231468690066A9C7 /* RedditTableViewController.swift */,
 				79FCE19822DFB55D00624AC3 /* numberGame.swift */,
 				79FCE19A22DFB66800624AC3 /* arrayController.swift */,
 				79FCE18D22DEF6C900624AC3 /* Assets.xcassets */,
@@ -224,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FCE19922DFB55D00624AC3 /* numberGame.swift in Sources */,
+				79B27C90231468690066A9C7 /* RedditTableViewController.swift in Sources */,
+				79B27C8E231467870066A9C7 /* Topic.swift in Sources */,
 				79FCE18922DEF6C800624AC3 /* ViewController.swift in Sources */,
 				79FCE18722DEF6C800624AC3 /* AppDelegate.swift in Sources */,
 				7992868623087498004E96A4 /* TableViewController.swift in Sources */,

@@ -35,29 +35,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-Sh-AqG">
-                                <rect key="frame" x="172" y="433" width="31" height="30"/>
+                                <rect key="frame" x="166" y="433" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New"/>
+                                <state key="normal" title="Data"/>
                                 <connections>
                                     <action selector="loadNew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVn-x8-svU"/>
+                                    <segue destination="WtQ-P7-ioS" kind="show" id="Gz5-Sz-eoq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P13-Cs-sTQ">
-                                <rect key="frame" x="67" y="481" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="myImg" destination="P13-Cs-sTQ" id="TqL-CU-0Is"/>
                         <outlet property="text" destination="bGF-TL-dar" id="YXo-Nw-ow4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="46"/>
+            <point key="canvasLocation" x="701.60000000000002" y="45.42728635682159"/>
         </scene>
         <!--Number Game-->
         <scene sceneID="RHS-a1-dbS">
@@ -95,6 +91,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssE-SS-GoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1549.5999999999999" y="46.326836581709152"/>
+        </scene>
+        <!--Reddit Table View Controller-->
+        <scene sceneID="QF7-f3-7Xk">
+            <objects>
+                <tableViewController id="WtQ-P7-ioS" customClass="RedditTableViewController" customModule="UIIntro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cr7-fn-9Rw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Reddit" rowHeight="78" id="heR-Kw-Rfv" customClass="Topic" customModule="UIIntro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="78"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="heR-Kw-Rfv" id="VQA-AO-Fhg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7H-Va-m5A">
+                                            <rect key="frame" x="9" y="-1" width="350" height="59"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Topic" destination="H7H-Va-m5A" id="y0b-Hy-UkT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WtQ-P7-ioS" id="gFQ-nS-Zcc"/>
+                            <outlet property="delegate" destination="WtQ-P7-ioS" id="iB8-nN-kl7"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZa-vC-QxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="859.52023988005999"/>
         </scene>
         <!--Array Controller-->
         <scene sceneID="zKb-a6-i36">
