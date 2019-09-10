@@ -1,4 +1,5 @@
 import Cocoa
+import Foundation
 //Hello World
 var str = "Hello, playground"
 print(str)
@@ -53,6 +54,25 @@ for i in 0 ... 10{
 func addTwo(a: Int, b:Int) -> Int{
     return a + b
 }
+func crackSomePassword(lock: DispatchGroup, numberToCrack: Int){
+    let queue = DispatchQueue(label: "md5")
+    lock.enter()
+    queue.async {
+        //numberToCrack & 4
+        print("inThread")
+        lock.leave()
+    }
+}
+var myLock = DispatchGroup()
+print("start")
+for i in 0 ... 100{
+    print(i)
+    crackSomePassword(lock: myLock, numberToCrack: i)
+}
+myLock.notify(queue: .main){
+    print("done")
+}
+
 addTwo(a: 3, b: 3)
 // inout allows the modification of data since parameters are const by default
 func changeValueofA (a: inout Int){
@@ -94,3 +114,4 @@ typealias Point = (x: Int, y: Int)
 let origin: Point = (5, 10)
 print(origin.x)
 print(origin.y)
+

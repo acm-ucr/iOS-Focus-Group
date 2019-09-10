@@ -14,8 +14,6 @@ import Kingfisher
 class ViewController: UIViewController {
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var myImg: UIImageView!
-    var myThread = DispatchGroup()
-    var LoadData: JSON?
     override func viewDidLoad() {
         //Signal for Async Process
         super.viewDidLoad()
@@ -24,7 +22,13 @@ class ViewController: UIViewController {
     @IBAction func loadNew(_ sender: UIButton) {
         
     }
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "quickMove"{
+            let target = segue.destination as! numberGame
+            target.numberCount = 2
+        }
+    }
 
 }
+
+

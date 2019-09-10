@@ -8,56 +8,48 @@
 
 import UIKit
 
-class arrayController: UIViewController {
-    var myAry:[Int] = []
-    @IBOutlet weak var lastNumber: UILabel!
+class arrayController: UIViewController, UITextFieldDelegate {
+    var myAry:[String] = []
+    @IBOutlet weak var lastString: UILabel!
+    @IBOutlet weak var MyText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        for _ in 0...5{
-            myAry.append(Int.random(in: 1..<100))
-        }
+        MyText.delegate = self
         if let lastele = myAry.last{
-            lastNumber.text = String(lastele)
+            lastString.text = String(lastele)
         }
         else{
-            lastNumber.text = "Empty"
+            lastString.text = "Empty"
         }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func pop(_ sender: Any) {
-        if let popEle = myAry.popLast(){
-            if popEle.isMultiple(of: 3){
-                lastNumber.textColor = UIColor.red
-            }
-            else{
-                lastNumber.textColor = UIColor.black
-            }
-        }
+        myAry.popLast()
         if let lastele = myAry.last{
-            lastNumber.text = String(lastele)
+            lastString.text = String(lastele)
         }
         else{
-            lastNumber.text = "Empty"
+            lastString.text = "Empty"
         }
     }
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        MyText.becomeFirstResponder()
+        MyText.text = ""
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        MyText.resignFirstResponder()
+        return true
+    }
+
     @IBAction func push(_ sender: Any) {
-        let newele = Int.random(in: 1..<100)
         
-            if newele.isMultiple(of: 3){
-                lastNumber.textColor = UIColor.red
-            }
-            else{
-                lastNumber.textColor = UIColor.black
-            }
-        myAry.append(newele)
-    
+        myAry.append(MyText.text ?? "")
         if let lastele = myAry.last{
-            lastNumber.text = String(lastele)
+            lastString.text = String(lastele)
         }
         else{
-            lastNumber.text = "Empty"
+            lastString.text = "Empty"
         }
     }
     /*
