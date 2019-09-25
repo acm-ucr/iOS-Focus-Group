@@ -28,8 +28,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-Sh-AqG">
-                                <rect key="frame" x="166" y="433" width="42" height="30"/>
+                                <rect key="frame" x="144" y="433" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Data"/>
                                 <connections>
                                     <action selector="loadNew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVn-x8-svU"/>
