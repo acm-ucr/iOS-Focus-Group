@@ -1,5 +1,6 @@
 import Cocoa
 import Foundation
+
 //Hello World
 var str = "Hello, playground"
 print(str)
@@ -13,10 +14,10 @@ print(myNum) //10
 var myStr = "I love you"
 print(myStr + " Iron Man")
 //Tuple
-var myCord = (x: 100, y: 20)
+var myCord = (x: 100, y: 20, z: 30)
 print(myCord.x)
 print(myCord.y)
-
+print(myCord.z)
 // type convertion
 let num = 3000
 let endGame = myStr + String(num)
@@ -53,24 +54,6 @@ for i in 0 ... 10{
 // functionName(Parameter) -> return type
 func addTwo(a: Int, b:Int) -> Int{
     return a + b
-}
-func crackSomePassword(lock: DispatchGroup, numberToCrack: Int){
-    let queue = DispatchQueue(label: "md5")
-    lock.enter()
-    queue.async {
-        //numberToCrack & 4
-        print("inThread")
-        lock.leave()
-    }
-}
-var myLock = DispatchGroup()
-print("start")
-for i in 0 ... 100{
-    print(i)
-    crackSomePassword(lock: myLock, numberToCrack: i)
-}
-myLock.notify(queue: .main){
-    print("done")
 }
 
 addTwo(a: 3, b: 3)
@@ -114,4 +97,46 @@ typealias Point = (x: Int, y: Int)
 let origin: Point = (5, 10)
 print(origin.x)
 print(origin.y)
+
+//threading
+func crackSomePassword(lock: DispatchGroup, numberToCrack: Int){
+    let queue = DispatchQueue(label: "md5")
+    lock.enter()
+    queue.async {
+        
+        //numberToCrack & 4
+        sleep(1) //some very complex task
+        print(numberToCrack)
+        lock.leave()
+    }
+}
+func multiLockFunc(mainLock: DispatchGroup){
+    print("start of multithread")
+    var myLock = DispatchGroup()
+    //print("start")
+    for i in 0 ... 10{
+        //print(i)
+        crackSomePassword(lock: myLock, numberToCrack: i)
+    }
+    print("waiting for lock to finish")
+    myLock.wait()
+    print("MultiThread done")
+    
+}
+func singleThread(mainLock: DispatchGroup){
+    print("starting single")
+    let queue = DispatchQueue(label: "single")
+    queue.async {
+        for _ in 0 ... 10{
+            //print(i)
+            sleep(1)
+        }
+        print("Single Thread Done")
+    }
+    
+}
+var mainLock = DispatchGroup()
+singleThread(mainLock: mainLock)
+multiLockFunc(mainLock: mainLock)
+
 
