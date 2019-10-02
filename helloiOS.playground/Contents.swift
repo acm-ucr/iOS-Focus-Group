@@ -99,6 +99,7 @@ print(origin.x)
 print(origin.y)
 
 //threading
+//Will go over later
 func crackSomePassword(lock: DispatchGroup, numberToCrack: Int){
     let queue = DispatchQueue(label: "md5")
     lock.enter()
