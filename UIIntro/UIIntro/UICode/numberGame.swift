@@ -23,7 +23,13 @@ class numberGame: UIViewController {
         myNumber.text = String(numberCount)
         if numberCount == 10{
             self.performSegue(withIdentifier: "arrayScreen", sender: self)
-            
+        }
+    }
+//pass information from one Storyboard to another
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "arrayScreen" {
+            let dvc = segue.destination as! arrayController
+            dvc.myAry = ["welcome","ACM"]
         }
     }
     /*
