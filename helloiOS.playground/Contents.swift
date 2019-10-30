@@ -92,6 +92,7 @@ case .inPlay:
 case .gameOver:
     MygameState = .Start
 }
+/*
 //Type Alias AKA JS Prototypes
 typealias Point = (x: Int, y: Int)
 let origin: Point = (5, 10)
@@ -143,3 +144,4 @@ multiLockFunc(mainLock: mainLock)
 
 //who will finish first ??
 
+*/
