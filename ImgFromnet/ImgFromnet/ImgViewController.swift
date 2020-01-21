@@ -9,8 +9,8 @@
 import UIKit
 import Kingfisher
 import Spring
-class ViewController: UIViewController {
-
+class ImgViewController: UIViewController {
+    var url = URL(string: "https://i.redd.it/u0a8v7nss5c41.png")
    
     @IBOutlet weak var myImg: SpringImageView!
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         self.myImg.animation = "shake"
         self.myImg.autostart = false
         
-        let url = URL(string: "https://i.redd.it/u0a8v7nss5c41.png")
+        self.url = URL(string: "https://i.redd.it/u0a8v7nss5c41.png")
        myImg.kf.setImage(with: url)
         // Do any additional setup after loading the view.
     }
