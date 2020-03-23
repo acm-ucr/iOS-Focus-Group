@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 class ViewController: UIViewController {
 var Count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         build()
@@ -18,23 +19,31 @@ var Count = 0
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func changeValue(_ sender: Any) {
+        let ref = Database.database().reference()
+        let Movieref = ref.child("Movie")
+        let ranValue = Int(arc4random_uniform(UInt32(10)))
+        Movieref.child("Street").setValue(ranValue)
+    }
     @IBOutlet weak var string: UILabel!
     func pullData (){
         //Pull.enter()
         let ref = Database.database().reference()
         let Movieref = ref.child("Movie")
-        Movieref.observe(.childAdded, with: {(snapshot) in
-            let myValue = JSON(snapshot.value as Any)
-            print(myValue)
-            if let movieTitle = myValue["MovieName"].string{
-                self.string.text = movieTitle
-            }
-            else{
-                print("null")
-            }
+        Movieref.observe(.childChanged, with: {(snapshot) in
+            print(snapshot.key)
+            print(snapshot.value)
+//            if let movieTitle = myValue["MovieName"].string{
+//                self.string.text = movieTitle
+//                print(movieTitle)
+//            }
+//            else{
+//                print("null")
+//            }
 
         })
     }
+    
 
 }
 

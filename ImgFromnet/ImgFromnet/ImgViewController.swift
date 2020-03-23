@@ -19,7 +19,7 @@ class ImgViewController: UIViewController {
       //  myLabel.text = curLabel
 //        self.myImg.animation = "shake"
 //        self.myImg.autostart = false
-            url = URL(string: curLabel)
+            url = URL(string: "https://www.ancient.eu/img/r/p/500x600/152.jpg?v=1485680514")
 //        self.url = URL(string: "https://i.redd.it/u0a8v7nss5c41.png")
        myImg.kf.setImage(with: url)
         // Do any additional setup after loading the view.
